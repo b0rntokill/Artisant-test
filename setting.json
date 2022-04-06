@@ -1,0 +1,5 @@
+// Настройки для VSCode для отказа от использования собственной версии TS
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}

@@ -1,0 +1,124 @@
+@import "src/scss/variables";
+
+.card {
+  width: 100%;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: $card-shadow;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: $card-shadow-hover;
+    // Пока так для наглядности применимости стилей по ховеру
+    & .descriptionWrapper .itemName {
+      color: $on-hover-text-color;
+    }
+  }
+
+  .imgWrapper {
+    position: relative;
+    // Исходя из требований дизайнера
+    padding-bottom: calc((404 / 305) * 100%);
+    background: $background-img-wrapper;
+  }
+
+  .descriptionWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 21px 17px 15px 17px;
+
+    .textWrapper {
+      display: flex;
+      flex-flow: column;
+      margin: 0;
+
+      .created {
+        margin-bottom: 3px;
+        font-size: $small-text-size;
+        line-height: $small-line-height;
+        color: $created-text-color;
+      }
+
+      .author {
+        font-size: $base-text-size;
+        line-height: $base-line-height;
+        font-weight: 700;
+        color: $on-image-text-color;
+      }
+    }
+
+    .itemName {
+      margin: 0 70px 0 0;
+      font-size: $medium-plus-text-size;
+      line-height: $medium-plus-line-height;
+      font-weight: 400;
+      color: $on-image-text-color;
+    }
+  }
+
+  .infoWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 78px;
+    padding: 6px 18px;
+
+    .available,
+    .price {
+      display: flex;
+      flex-flow: column;
+      width: 40%;
+      margin: 0;
+
+      .availableText,
+      .priceText {
+        margin-bottom: 7px;
+        font-size: $small-text-size;
+        line-height: $small-line-height;
+        color: $second-text-color;
+      }
+
+      .availableAmount,
+      .priceCost {
+        max-width: 100%;
+        font-size: $medium-text-size;
+        line-height: $medium-line-height;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    .available {
+      align-items: flex-start;
+      align-content: flex-start;
+
+      .availableAmount {
+        color: $text-color;
+      }
+    }
+
+    .price {
+      align-items: flex-end;
+      align-content: flex-end;
+
+      .priceCost {
+        color: $price-text-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "src/scss/variables";
+
+.customButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 300px;
+  margin-bottom: 25px;
+  padding: 14px 16px;
+  font-family: $default-font;
+  font-size: $base-text-size;
+  line-height: $base-line-height;
+  font-weight: 400;
+  box-shadow: $btn-shadow;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: $btn-shadow-hover;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

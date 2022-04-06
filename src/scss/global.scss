@@ -1,0 +1,49 @@
+@import "variables";
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  margin: 0 auto;
+
+  padding: 0;
+  font-family: $default-font;
+  font-weight: 400;
+  background-color: $background-main;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 10px;
+
+  @media (min-width: $mobile-small-width) {
+    width: $mobile-small-width;
+    padding: 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 20px;
+  }
+
+  @media (min-width: $desktop-small-width) {
+    width: $desktop-small-width;
+  }
+
+  @media (min-width: $desktop-fixed-width) {
+    width: $desktop-fixed-width;
+    padding: 32px;
+  }
+}
